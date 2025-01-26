@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="ReqRes Tests">
+        <classes>
+            <class name="com.rv.loginTests.LoginTest"></class>
+            <class name="com.rv.userTests.UserTest"></class>
+            <class name="com.rv.registerTests.RegisterTest"></class>
+        </classes>
+    </test>
+</suite>
