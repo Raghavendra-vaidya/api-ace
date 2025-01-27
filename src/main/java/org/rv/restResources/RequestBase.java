@@ -8,4 +8,5 @@ import java.util.Properties;
 public class RequestBase {
     public ResourcePathLoader resource = new ResourcePathLoader();
     public Properties config = new ConfigLoader().loadConfig();
+
 }
