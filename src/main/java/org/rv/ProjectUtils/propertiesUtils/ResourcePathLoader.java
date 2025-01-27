@@ -10,9 +10,10 @@ public class ResourcePathLoader {
     PropertiesLoader propertiesLoader;
 
     public ResourcePathLoader() {
-       Properties resourceProps =  propertiesLoader.loadFile("src/main/resources/resourcePaths.properties");
-       this.users = resourceProps.getProperty("USERS");
-       this.register = resourceProps.getProperty("REGISTER");
-       this.login = resourceProps.getProperty("LOGIN");
+        propertiesLoader = new PropertiesLoader();
+        Properties resourceProps = propertiesLoader.loadFile("src/main/resources/resourcePaths.properties");
+        this.users = resourceProps.getProperty("USERS");
+        this.register = resourceProps.getProperty("REGISTER");
+        this.login = resourceProps.getProperty("LOGIN");
     }
 }

@@ -10,11 +10,11 @@ public class EnvironmentHandler {
         this.environment = System.getProperty("env");
     }
 
-    public String getEnvironment(){
-        if (Objects.isNull(environment) || environment.isEmpty()){
-            environment = "QA";
+    public String getEnvironment() {
+        if (Objects.isNull(environment) || environment.isEmpty()) {
+            environment = "qa";
         }
-        System.out.println("Current environment --> "+environment);
+        System.out.println("Current environment --> " + environment);
         return environment;
     }
 }

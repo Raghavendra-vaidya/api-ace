@@ -5,15 +5,16 @@ import org.rv.ProjectUtils.EnvironmentHandler;
 import java.util.Properties;
 
 public class ConfigLoader {
-    private  String environment;
+    private final String environment;
+
     public ConfigLoader() {
-       this.environment =  new EnvironmentHandler().getEnvironment();
+        this.environment = new EnvironmentHandler().getEnvironment();
     }
 
-    PropertiesLoader loader;
-    public Properties loadConfig(){
-        loader = new PropertiesLoader();
-        String configFile = String.format("src/main/resources/%s-config.properties",environment);
+    public Properties loadConfig() {
+        PropertiesLoader loader = new PropertiesLoader();
+        String configFile = String.format("src/main/resources/%s-config.properties", environment);
+        System.out.println(configFile);
         return loader.loadFile(configFile);
     }
 }
